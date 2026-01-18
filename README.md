@@ -1,6 +1,6 @@
 # 🎟️ BookMyShow – Database Design & SQL Assignment
 
-## 📌 Problem Statement
+## Problem Statement
 BookMyShow is a ticket booking platform where users can book tickets for movie shows.  
 For a given **theatre**, users can:
 - View the **next 7 dates**
@@ -11,9 +11,9 @@ This assignment focuses on **database design, normalization, and SQL queries**.
 
 ---
 
-## 🧩 Part P1 – Entity Identification & Database Design
+## Part P1 – Entity Identification & Database Design
 
-### 📦 Identified Entities
+### Identified Entities
 1. Theatre  
 2. Screen  
 3. Movie  
@@ -26,9 +26,9 @@ The design follows:
 
 ---
 
-## 🗂️ Entity Details & Attributes
+## Entity Details & Attributes
 
-### 1️⃣ Theatre
+### 1️. Theatre
 | Column | Type | Description |
 |------|------|-------------|
 | theatre_id | INT (PK) | Unique theatre identifier |
@@ -38,7 +38,7 @@ The design follows:
 
 ---
 
-### 2️⃣ Screen
+### 2️. Screen
 | Column | Type | Description |
 |------|------|-------------|
 | screen_id | INT (PK) | Unique screen |
@@ -48,7 +48,7 @@ The design follows:
 
 ---
 
-### 3️⃣ Movie
+### 3️. Movie
 | Column | Type | Description |
 |------|------|-------------|
 | movie_id | INT (PK) | Unique movie |
@@ -59,7 +59,7 @@ The design follows:
 
 ---
 
-### 4️⃣ Show
+### 4️. Show
 | Column | Type | Description |
 |------|------|-------------|
 | show_id | INT (PK) | Unique show |
@@ -71,26 +71,26 @@ The design follows:
 
 ---
 
-## ✅ Normalization
+## Normalization
 
-### ✔ First Normal Form (1NF)
+### First Normal Form (1NF)
 - Atomic values
 - No repeating groups
 
-### ✔ Second Normal Form (2NF)
+### Second Normal Form (2NF)
 - No partial dependency
 
-### ✔ Third Normal Form (3NF)
+### Third Normal Form (3NF)
 - No transitive dependency
 
-### ✔ Boyce-Codd Normal Form (BCNF)
+### Boyce-Codd Normal Form (BCNF)
 - Every determinant is a candidate key
 
-✔ **Schema satisfies BCNF**
+**Schema satisfies BCNF**
 
 ---
 
-## 🛠️ SQL Table Creation
+## SQL Table Creation
 
 ```sql
 CREATE TABLE theatre (
@@ -128,7 +128,7 @@ CREATE TABLE show_details (
 );
 ```
 
-### 📊 Sample Data Insertion
+### Sample Data Insertion
 ```sql
 INSERT INTO theatre (name, city, address)
 VALUES ('PVR Nexus Forum', 'Bengaluru', 'Koramangala');
@@ -150,8 +150,8 @@ VALUES
 (2, 2, '2024-04-25', '16:40:00', '19:05:00');
 ```
 
-## 🔍 Part P2 – Query Requirement
-### 🎯 Requirement
+## Part P2 – Query Requirement
+### Requirement
 List all movies and their show timings for a given:
  - Theatre
  - Date
